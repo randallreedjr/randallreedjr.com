@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Randall Reed, Jr. | Nil and Presence in Ruby</title>
+  </head>
+  <body>
+    <section class="article-header">
+      <h1>Nil and Presence in Ruby</h1>
+      <h3>Randall Reed, Jr.</h3>
+      <h4>June 21, 2016</h4>
+    </section>
+    <main class="article-content">
+      <p>One of the things I love about Ruby is <em>nil</em>. It can represent nothing, but is also a useful return value that can be a proxy for certain behavior.</p>
+      <p>For example, nil can represent that a value was never assigned, or that a method never executed any statements.</p>
+  <pre>
+    def method_that_does_nothing(some_condition)
+      if some_condition
+        return false
+      end
+    end
+  </pre>
+      <p>So if we want to determine whether <em>method_that_does_nothing</em> executed any statements, we can just use something like</p>
+  <pre>
+    if method_that_does_nothing
+      # do something else
+    end
+  </pre>
+      <p>This also comes in useful if you have a variable that could have been assigned a value, but want to ensure a default is provided if not. Since nil is falsey, it can be combined with a more meaningful result via the OR operator.</p>
+  <pre>
+    return some_string || some_default_string
+  </pre>
+      <p>But what if some_string will be an empty string ('') instead of nil? In that case, the code above would return ''. If you still wanted to preserve the same functionality, you would have to use something else.</p>
+      <p>When I encountered this recently, my first thought was to utilize a ternary operator, which was okkkk...</p>
+  <pre>
+    some_string.present? some_string : some_default_string
+  </pre>
+      <p>But looking at that code, my ruby-sense started tingling. Repeating some_string felt redundant, and I had a hunch there was a more elegant way to handle this circumstance in Rails. And it did - presence</p>
+  <pre>
+    some_string.presence || some_default_string
+  </pre>
+      <p>A cousin of .present?, .presence returns the object if .present? would evaluate to true, and nil otherwise. Plugging this in allows us to use our original code with only a minor variation, and now it handles both nil and empty string perfectly!</p>
+      <p><strong>Note: Due to it's relation to present?, presence is only available in Rails, not in Ruby.</strong></p>
+    </main>
+  </body>
+</html>
