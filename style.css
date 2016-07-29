@@ -1,18 +1,20 @@
 body {
   height: 100%;
-  border: 1px solid green;
+  border: 1px dashed green;
+  font-family: serif;
 }
 
 html {
   height: 100%;
-  border: 1px solid lightblue;
+  border: 1px dashed lightblue;
 }
 
 aside {
   width: 20%;
+  min-width: 120px;
   height: 100%;
   float: left;
-  border: 1px solid red;
+  border: 1px dashed red;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -21,7 +23,7 @@ main {
   width: 80%;
   height: 100%;
   float: left;
-  border: 1px solid orange;
+  border: 1px dashed orange;
   padding: 10px;
   box-sizing: border-box;
 }
