@@ -39,3 +39,11 @@ img {
   width: 100px;
   border-radius: 50px;
 }
+
+p.technologies {
+  font-family: monospace;
+}
+
+span.tags {
+  font-style: italic;
+}
