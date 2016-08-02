@@ -1,0 +1,76 @@
+$teal: #33cccc;
+
+body {
+  height: 100%;
+  font-family: "proxima-nova", sans-serif;
+  margin-bottom: 40px;
+}
+
+html {
+  height: 100%;
+}
+
+aside {
+  position: fixed;
+  width: 126px;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h1.name {
+  font-weight: 400;
+  font-family: jubilat, serif;
+}
+
+nav li {
+  padding-top: 10px;
+}
+
+nav a, nav a:visited {
+  color: #33cccc;
+  font-family: jubilat, serif;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  position: relative;
+  width: calc(100% - 170px);
+  left: 170px;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: jubilat, serif;
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 3px solid $teal;
+}
+
+p.technologies {
+  font-family: monospace;
+}
+
+span.tags {
+  font-weight: 600;
+}
