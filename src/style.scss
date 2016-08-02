@@ -1,0 +1,99 @@
+$teal: #33cccc;
+$headshot-width: 100px;
+$heading-font: jubilat;
+$body-font: 'proxima-nova';
+
+$sidebar-width: 170px;
+$sidebar-content-width: 126px;
+
+$footer-height: 40px;
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+html, body {
+  height: 100%;
+  position: static;
+}
+
+body {
+  font-family: $body-font, sans-serif;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside {
+  position: fixed;
+  width: $sidebar-content-width;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  nav {
+    li {
+      padding-top: 10px;
+    }
+
+    a {
+      color: $teal;
+      font-family: $heading-font, serif;
+      text-decoration: none;
+      font-size: 24px;
+      &:visited {
+        color: $teal;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  @include calc(height, '100% - #{$footer-height}');
+  @include calc(width, '100% - #{$sidebar-width}');
+
+  margin-left: $sidebar-width;
+  padding: 10px 10px $footer-height 10px;
+  box-sizing: border-box;
+}
+
+h1, h2, p.heading {
+  font-family: $heading-font, serif;
+  font-weight: 500;
+  &.name {
+    font-weight: 400;
+  }
+}
+
+p.heading {
+  font-size: 2em;
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+
+img {
+  height: $headshot-width;
+  width: $headshot-width;
+  border-radius: $headshot-width / 2;
+  border: 3px solid $teal;
+}
+
+p.technologies {
+  font-family: monospace;
+
+  span.tags {
+    font-weight: 600;
+  }
+}
