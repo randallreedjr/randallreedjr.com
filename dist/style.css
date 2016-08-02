@@ -1,10 +1,9 @@
-body {
+html, body {
   height: 100%;
-  font-family: "proxima-nova", sans-serif;
-  margin-bottom: 40px; }
+  position: static; }
 
-html {
-  height: 100%; }
+body {
+  font-family: "proxima-nova", sans-serif; }
 
 aside {
   position: fixed;
@@ -12,40 +11,42 @@ aside {
   height: 100%;
   padding: 10px;
   box-sizing: border-box; }
-
-h1.name {
-  font-weight: 400;
-  font-family: jubilat, serif; }
-
-nav li {
-  padding-top: 10px; }
-
-nav a, nav a:visited {
-  color: #33cccc;
-  font-family: jubilat, serif;
-  text-decoration: none;
-  font-size: 24px; }
-
-nav a:hover {
-  text-decoration: underline; }
+  aside nav li {
+    padding-top: 10px; }
+  aside nav a {
+    color: #33cccc;
+    font-family: jubilat, serif;
+    text-decoration: none;
+    font-size: 24px; }
+    aside nav a:visited {
+      color: #33cccc; }
+    aside nav a:hover {
+      text-decoration: underline; }
 
 main {
-  position: relative;
+  height: -moz-calc(100% - 40px);
+  height: -webkit-calc(100% - 40px);
+  height: calc(100% - 40px);
+  width: -moz-calc(100% - 170px);
+  width: -webkit-calc(100% - 170px);
   width: calc(100% - 170px);
-  left: 170px;
-  height: 100%;
-  padding: 10px;
+  margin-left: 170px;
+  padding: 10px 10px 40px 10px;
   box-sizing: border-box; }
 
-h1, h2 {
+h1, h2, p.heading {
   font-family: jubilat, serif;
   font-weight: 500; }
+  h1.name, h2.name, p.heading.name {
+    font-weight: 400; }
+
+p.heading {
+  font-size: 2em; }
 
 ul {
   padding: 0; }
-
-li {
-  list-style-type: none; }
+  ul li {
+    list-style-type: none; }
 
 img {
   height: 100px;
@@ -55,8 +56,7 @@ img {
 
 p.technologies {
   font-family: monospace; }
-
-span.tags {
-  font-weight: 600; }
+  p.technologies span.tags {
+    font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */

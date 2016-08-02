@@ -1,76 +1,96 @@
 $teal: #33cccc;
+$headshot-width: 100px;
+$heading-font: jubilat;
+$body-font: 'proxima-nova';
 
-body {
-  height: 100%;
-  font-family: "proxima-nova", sans-serif;
-  margin-bottom: 40px;
+$sidebar-width: 170px;
+$sidebar-content-width: 126px;
+
+$footer-height: 40px;
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
 }
 
-html {
+html, body {
   height: 100%;
+  position: static;
+}
+
+body {
+  font-family: $body-font, sans-serif;
 }
 
 aside {
   position: fixed;
-  width: 126px;
+  width: $sidebar-content-width;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-}
 
-h1.name {
-  font-weight: 400;
-  font-family: jubilat, serif;
-}
+  nav {
+    li {
+      padding-top: 10px;
+    }
 
-nav li {
-  padding-top: 10px;
-}
-
-nav a, nav a:visited {
-  color: #33cccc;
-  font-family: jubilat, serif;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-nav a:hover {
-  text-decoration: underline;
+    a {
+      color: $teal;
+      font-family: $heading-font, serif;
+      text-decoration: none;
+      font-size: 24px;
+      &:visited {
+        color: $teal;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 main {
-  position: relative;
-  width: calc(100% - 170px);
-  left: 170px;
-  height: 100%;
-  padding: 10px;
+  @include calc(height, '100% - #{$footer-height}');
+  @include calc(width, '100% - #{$sidebar-width}');
+
+  margin-left: $sidebar-width;
+  padding: 10px 10px $footer-height 10px;
   box-sizing: border-box;
 }
 
-h1, h2 {
-  font-family: jubilat, serif;
+h1, h2, p.heading {
+  font-family: $heading-font, serif;
   font-weight: 500;
+  &.name {
+    font-weight: 400;
+  }
+}
+
+p.heading {
+  font-size: 2em;
 }
 
 ul {
   padding: 0;
+
+  li {
+    list-style-type: none;
+  }
 }
 
-li {
-  list-style-type: none;
-}
 
 img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
+  height: $headshot-width;
+  width: $headshot-width;
+  border-radius: $headshot-width / 2;
   border: 3px solid $teal;
 }
 
 p.technologies {
   font-family: monospace;
-}
 
-span.tags {
-  font-weight: 600;
+  span.tags {
+    font-weight: 600;
+  }
 }
