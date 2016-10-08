@@ -17,3 +17,8 @@ task :build => 'sass:run' do
   `cp src/robots.txt dist/robots.txt`
   `cp -r src/images dist/images`
 end
+
+desc 'Deploy updates to Amazon S3'
+task :deploy => 'build' do
+  `aws s3 cp ./dist s3://randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
+end
