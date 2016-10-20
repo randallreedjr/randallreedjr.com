@@ -1,7 +1,10 @@
 $teal: #33cccc;
+$white-smoke: #f5f5f5;
 $headshot-width: 100px;
 $heading-font: jubilat;
 $body-font: 'proxima-nova';
+
+$teal-border: 3px solid $teal;
 
 $sidebar-width: 170px;
 $sidebar-content-width: 126px;
@@ -62,6 +65,22 @@ main {
   box-sizing: border-box;
 }
 
+.quotation {
+  text-align: center;
+  color: #555;
+  background-color: $white-smoke;
+  border: $teal-border;
+}
+
+.quote {
+  font-size: 28px;
+}
+
+.attribution {
+  font-size: 22px;
+  font-style: italic;
+}
+
 h1, h2, p.heading {
   font-family: $heading-font, serif;
   font-weight: 500;
@@ -82,12 +101,11 @@ ul {
   }
 }
 
-
 img {
   height: $headshot-width;
   width: $headshot-width;
   border-radius: $headshot-width / 2;
-  border: 3px solid $teal;
+  border: $teal-border;
 }
 
 p.technologies {
@@ -96,4 +114,12 @@ p.technologies {
   span.tags {
     font-weight: 600;
   }
+}
+
+#contact {
+  margin-bottom: 50px;
+}
+
+.strike-through {
+  text-decoration: line-through;
 }
