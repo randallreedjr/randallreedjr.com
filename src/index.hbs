@@ -11,21 +11,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <aside>
-      <div class="title">
-        <img src="images/interview.jpg" alt="headshot">
-        <h1 class="name">Randall Reed, Jr.</h1>
-      </div>
-      <hr>
-      <nav class="sections">
-        <ul>
-          <li><a href='#about'>About</a></li>
-          <li><a href='#projects'>Projects</a></li>
-          <li><a href='#contact'>Contact</a></li>
-          <li><a href='https://medium.com/@randallreedjr' target='_blank'>Blog</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <aside id="side-dev">{{> side-nav}}</aside>
 
     <main>
       <div class="quotation">
@@ -49,8 +35,8 @@
       <div id="projects">
         <h1>Projects</h1>
         <h2>randallreedjr.com</h2>
-        <p>This site! Created from scratch in a text editor. Hosted on AWS in an S3 bucket. Uses Rake to pre-compile the Sass to CSS and deploy using the aws cli tool.</p>
-        <p class="technologies">Technologies: <span class="tags">HTML, CSS, Sass, AWS S3, Rake</span></p>
+        <p>This site! Created from scratch in a text editor. Hosted on AWS in an S3 bucket. Uses Gulp to pre-compile the Sass to CSS and Rake to deploy using the aws cli tool.</p>
+        <p class="technologies">Technologies: <span class="tags">HTML, Handlebars, CSS, Sass, AWS S3, Gulp, Rake</span></p>
 
         <h2>Screenslate</h2>
         <p><a href="http://www.screenslate.com" target="_blank">Screenslate</a> is a site devoted to finding the best movie screenings in New York City. Funded by a Kickstarter campaign, I developed the backend CMS and API. I also managed the deployed application on Heroku and used add-ons such as New Relic, Papertrail, and Scout to tune performance and detect issues.</p>
@@ -99,5 +85,8 @@
         <p>LinkedIn: <a href="http://www.linkedin.com/in/randallreedjr" target="_blank">/in/randallreedjr</a></p>
       </div>
     </main>
+    <footer>
+      {{> footer}}
+    </footer>
   </body>
 </html>

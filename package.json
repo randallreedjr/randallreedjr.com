@@ -1,0 +1,27 @@
+{
+  "name": "randallreedjr.com",
+  "version": "1.0.0",
+  "description": "Home page",
+  "main": "index.hbs",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randallreedjr/randallreedjr.com.git"
+  },
+  "author": "Randall Reed, Jr.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randallreedjr/randallreedjr.com/issues"
+  },
+  "homepage": "https://github.com/randallreedjr/randallreedjr.com#readme"
+}
