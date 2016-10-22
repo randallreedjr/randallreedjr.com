@@ -14,6 +14,7 @@ end
 
 desc 'Build files for distribution'
 task :build do
+  puts "Building..."
   `gulp`
 end
 
