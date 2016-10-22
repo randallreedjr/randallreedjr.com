@@ -3,3 +3,4 @@
 dist/*
 .sass-cache/*
 credentials.csv
+node_modules/*

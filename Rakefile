@@ -11,11 +11,8 @@ namespace :sass do
 end
 
 desc 'Build files for distribution'
-task :build => 'sass:run' do
-  `cp src/index.html dist/index.html`
-  `cp src/sitemap.xml dist/sitemap.xml`
-  `cp src/robots.txt dist/robots.txt`
-  `cp -r src/images dist/images`
+task :build do
+  `gulp`
 end
 
 desc 'Deploy updates to Amazon S3'
