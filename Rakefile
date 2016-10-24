@@ -12,6 +12,16 @@ namespace :sass do
   end
 end
 
+desc 'Setup dev environment'
+task :setup do
+  puts 'Installing Ruby gems'
+  `bundle install`
+  puts 'Install gulp'
+  `npm install -g gulp`
+  puts 'Installing node modules'
+  `npm install`
+end
+
 desc 'Build files for distribution'
 task :build do
   puts "Building..."
