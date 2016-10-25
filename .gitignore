@@ -1,6 +1,7 @@
 .DS_Store
 ./**/.DS_Store
 dist/*
+dist/**/*
 .sass-cache/*
 credentials.csv
 node_modules/*
