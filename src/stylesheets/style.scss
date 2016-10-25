@@ -44,7 +44,6 @@ aside {
     a {
       color: $teal;
       font-family: $heading-font, serif;
-      text-decoration: none;
       font-size: 24px;
       &:visited {
         color: $teal;
@@ -54,6 +53,30 @@ aside {
       }
     }
   }
+}
+
+.contact-links-container {
+  display: flex;
+}
+
+.contact-links {
+  flex-grow: 1;
+}
+
+.contact-link, .nav-link {
+  text-decoration: none;
+
+}
+
+.contact-link {
+  color: black;
+  &:visited {
+    color: black;
+  }
+}
+
+.contact-link:hover {
+  color: $teal;
 }
 
 main {
@@ -122,4 +145,9 @@ p.technologies {
 
 .strike-through {
   text-decoration: line-through;
+}
+
+.fa {
+  margin-right: 15px;
+  color: $teal;
 }
