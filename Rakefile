@@ -28,6 +28,11 @@ task :build do
   `gulp`
 end
 
+desc 'Open file in web browser for viewing'
+task :open do
+  `open dist/index.html`
+end
+
 desc 'Deploy updates to Amazon S3'
 task :deploy => 'build' do
   branch = `git rev-parse --abbrev-ref HEAD`.strip
