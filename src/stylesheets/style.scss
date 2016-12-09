@@ -7,6 +7,7 @@ $body-font: 'proxima-nova';
 $teal-border: 3px solid $teal;
 
 $sidebar-width: 170px;
+$main-min-width: 350px;
 $sidebar-content-width: 126px;
 
 $footer-height: 40px;
@@ -30,11 +31,13 @@ body {
 }
 
 aside {
-  position: fixed;
-  width: $sidebar-content-width;
-  height: 100%;
-  padding: 10px;
+  background-color: white;
   box-sizing: border-box;
+  height: 100%;
+  padding: 20px 10px 10px;
+  position: fixed;
+  top: 0;
+  width: $sidebar-content-width;
 
   nav {
     li {
@@ -83,16 +86,18 @@ main {
   @include calc(height, '100% - #{$footer-height}');
   @include calc(width, '100% - #{$sidebar-width}');
 
-  margin-left: $sidebar-width;
-  padding: 10px 10px $footer-height 10px;
   box-sizing: border-box;
+  margin-left: $sidebar-width;
+  min-width: $main-min-width;
+  padding: 10px 10px $footer-height 10px;
 }
 
 .quotation {
-  text-align: center;
-  color: #555;
   background-color: $white-smoke;
   border: $teal-border;
+  color: #555;
+  padding: 5px;
+  text-align: center;
 }
 
 .quote {
