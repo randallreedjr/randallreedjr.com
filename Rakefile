@@ -38,7 +38,7 @@ task :deploy => 'build' do
   branch = `git rev-parse --abbrev-ref HEAD`.strip
   if branch == 'master'
     puts "Deploying to aws!".green
-    `aws s3 cp ./dist s3://randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
+    `aws s3 cp ./dist s3://www.randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
   else
     puts "Error! Cannot deploy from branch '#{branch}', only 'master'".red
   end
