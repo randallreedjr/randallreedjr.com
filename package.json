@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Home page",
   "main": "index.hbs",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-compile-handlebars": "^0.6.1",
