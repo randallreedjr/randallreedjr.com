@@ -3,10 +3,11 @@ $white-smoke: #f5f5f5;
 $headshot-width: 100px;
 $heading-font: jubilat;
 $body-font: 'proxima-nova';
+$nav-list-font-size: 20px;
+$nav-list-nested-font-size: 16px;
+$nav-list-spacing: 15px;
 
-$teal-border: 3px solid $teal;
-
-$sidebar-width: 170px;
+$sidebar-width: 250px;
 $main-min-width: 350px;
 $sidebar-content-width: 142px;
 
@@ -40,8 +41,25 @@ aside {
   width: $sidebar-content-width;
 
   nav {
+    ul {
+      &.nav__list {
+        font-size: $nav-list-font-size;
+      }
+
+      &.nav__list--nested {
+        font-size: $nav-list-nested-font-size;
+        padding-top: $nav-list-spacing;
+      }
+    }
+
     li {
-      padding-top: 10px;
+      &.nav__listitem {
+        padding-bottom: $nav-list-spacing;
+      }
+
+      &.nav__listitem--nested {
+
+      }
     }
 
     a {
@@ -53,12 +71,6 @@ aside {
       }
       &:hover {
         text-decoration: underline;
-      }
-      &.nav-link {
-        font-size: 24px;
-      }
-      &.nav-link-nested {
-        font-size: 18px;
       }
     }
   }
@@ -72,20 +84,30 @@ aside {
   flex-grow: 1;
 }
 
-.contact-link, .nav-link, .nav-link-nested {
+.contact-link, .nav__link, .project__link {
   text-decoration: none;
-
 }
 
 .contact-link {
   color: black;
+
   &:visited {
     color: black;
   }
+
+  &:hover {
+    color: $teal;
+  }
 }
 
-.contact-link:hover {
+
+
+.project__link {
   color: $teal;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 main {
@@ -99,9 +121,8 @@ main {
 }
 
 .quotation {
-  background-color: $white-smoke;
-  border: $teal-border;
-  color: #555;
+  background-color: $teal;
+  color: $white-smoke;
   padding: 5px;
   text-align: center;
 }
@@ -133,24 +154,19 @@ ul {
   li {
     list-style-type: none;
   }
-
-  &.nested {
-    padding-left: 15px;
-  }
 }
 
 .profile-img {
   height: $headshot-width;
   width: $headshot-width;
   border-radius: $headshot-width / 2;
-  border: $teal-border;
 }
 
 p.technologies {
   font-family: monospace;
 
   span.tags {
-    font-weight: 600;
+    // font-weight: 600;
   }
 }
 
