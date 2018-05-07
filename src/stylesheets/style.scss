@@ -3,6 +3,9 @@ $white-smoke: #f5f5f5;
 $headshot-width: 100px;
 $heading-font: jubilat;
 $body-font: 'proxima-nova';
+
+$divider: 2px solid #bbb;
+
 $nav-list-font-size: 20px;
 $nav-list-nested-font-size: 16px;
 $nav-list-spacing: 15px;
@@ -31,6 +34,11 @@ body {
   margin-right: auto;
 }
 
+header {
+  margin-left: $sidebar-width;
+  min-width: $main-min-width;
+}
+
 aside {
   background-color: white;
   box-sizing: border-box;
@@ -39,6 +47,11 @@ aside {
   position: fixed;
   top: 0;
   width: $sidebar-content-width;
+
+  .title {
+    text-align: center;
+    border-bottom: $divider;
+  }
 
   nav {
     ul {
@@ -100,8 +113,6 @@ aside {
   }
 }
 
-
-
 .project__link {
   color: $teal;
 
@@ -120,6 +131,10 @@ main {
   padding: 10px 10px $footer-height 10px;
 }
 
+section:not(:last-child) {
+  border-bottom: $divider;
+}
+
 .quotation {
   background-color: $teal;
   color: $white-smoke;
@@ -136,7 +151,13 @@ main {
   font-style: italic;
 }
 
-h1, h2, p.heading {
+h1 {
+  text-align: center;
+  border-bottom: $divider;
+  padding-bottom: 10px;
+}
+
+h1, h2, h3, p.heading {
   font-family: $heading-font, serif;
   font-weight: 500;
   &.name {
