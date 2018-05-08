@@ -1,4 +1,4 @@
-$teal: #33cccc;
+$teal: #046C6C;
 $white-smoke: #f5f5f5;
 $headshot-width: 100px;
 $heading-font: jubilat;
@@ -28,6 +28,7 @@ html, body {
 }
 
 body {
+  background-color: #ddd;
   font-family: $body-font, sans-serif;
   width: 85%;
   margin-left: auto;
