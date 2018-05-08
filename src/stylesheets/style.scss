@@ -70,10 +70,6 @@ aside {
       &.nav__listitem {
         padding-bottom: $nav-list-spacing;
       }
-
-      &.nav__listitem--nested {
-
-      }
     }
 
     a {
@@ -150,7 +146,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-h1, h2, h3, p.heading {
+h1, h2, h3 {
   font-family: $heading-font, serif;
   font-weight: 500;
   &.name {
@@ -158,8 +154,7 @@ h1, h2, h3, p.heading {
   }
 }
 
-p.heading {
-  font-size: 2em;
+p {
 }
 
 ul {
@@ -178,10 +173,6 @@ ul {
 
 p.technologies {
   font-family: monospace;
-
-  span.tags {
-    // font-weight: 600;
-  }
 }
 
 #contact {
