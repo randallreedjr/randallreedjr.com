@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-  {{> header}}
+  {{> layout/header}}
   <body>
-    <aside id="side-dev">{{> side-nav}}</aside>
+    <aside id="side-dev">{{> layout/side-nav}}</aside>
 
     <header>
       <div class="quotation">
@@ -22,109 +22,13 @@
         <p>French (intermediate proficiency)</p>
         <p>Spanish (elementary proficiency)</p>
       </section>
-
-      <section id="freelance-projects">
-        <h2>Freelance Projects</h2>
-        <h3>Screenslate</h3>
-        <p><a href="http://www.screenslate.com" class="project__link" target="_blank">Screenslate</a> is a site devoted to finding the best movie screenings in New York City. For the site redesign funded by a Kickstarter campaign, I developed the backend CMS and API. I also managed the deployed application on Heroku and used add-ons such as New Relic, Papertrail, and Scout to tune performance and detect issues.</p>
-        <p class="technologies">Technologies: <span class='tags'>Ruby, Rails, Rspec, Refinery CMS, Javascript, CSS, ERB, AWS S3, Codeship CI, Heroku, Github</span></p>
-
-        <h3>CrossFit Waldwick</h3>
-        <p><a href="http://www.cfwaldwick.com" class="project__link" target="_blank">CrossFit Waldwick</a> is a CrossFit box opened in Waldwick, NJ in May 2016. Leading up to the grand opening, I created a static website in HTML and CSS before launching a fully functional Wordpress site. I also incorporated custom CSS into the Wordpress site, as well as made adjustments to the php code to hide unnecessary elements that couldn't be controlled through the theme's customization.</p>
-        <p class="technologies">Technologies: <span class='tags'>Wordpress, HTML, CSS, PHP</span></p>
-
-        <h3>ePancreas iOS App</h3>
-        <p>ePancreas is an app for the iPhone in the pre-release phase. I collaborated with the founder to help design the prototype of the application and communicate the design to the dev shop that built the prototype.</p>
-        <p class="technologies">Technologies: <span class="tags">Sketch</span></p>
-      </section>
-
-      <section id="open-source-projects">
-        <h2>Open Source Projects</h2>
-        <h3>NYC Tech Conferences</h3>
-        <p><a href="http://nyctechconferences.org/" class="project__link" target="_blank">NYC Tech Conferences</a> is a listing of tech conferences occurring in New York City.</p>
-        <p class="technologies">Technologies: <span class="tags">HTML, CSS, Jekyll, YAML, Github</span></p>
-
-        <h3>time-value</h3>
-        <p><a href="https://rubygems.org/gems/time_value" class="project__link" target="_blank">time-value</a> is a Ruby gem to perform time value of money calculations. It has methods for present value (PV), future value (FV), interest (I), number of periods (n), and payment (pmt).</p>
-        <p class="technologies">Technologies: <span class="tags">Ruby, Rspec, Financial Computation, Circle CI, Github</span></p>
-
-        <h3>roth_ira</h3>
-        <p><a href="https://rubygems.org/gems/roth_ira/" class="project__link" target="_blank">roth_ira</a> is a Ruby gem to calculate Roth IRA contribution limits, which vary based on income, age, and tax filing status.</p>
-        <p class="technologies">Technologies: <span class="tags">Ruby, RSpec, Circle CI, Github</span></p>
-      </section>
-
-      <section id="personal-projects">
-        <h2>Personal Projects</h2>
-        <h3>randallreedjr.com</h3>
-        <p>This site! As an exercise in minimalism, I created the site from scratch in a text editor. As new features were added, the site grew in complexity, and now uses Gulp to pre-compile the Sass to CSS and Rake to deploy using the aws cli tool. It is hosted on AWS in an S3 bucket.</p>
-        <p class="technologies">Technologies: <span class="tags">HTML, Handlebars, CSS, Sass, Gulp, Rake, AWS S3, AWS Cloudfront, Github</span></p>
-
-        <h3>git-undo</h3>
-        <p><a href='https://rubygems.org/gems/git_undo' class="project__link" target="_blank">git-undo</a> is a command line utility, packaged as a ruby gem, to simplify reversing a git command. I presented a talk about this gem at the NYC.rb Ruby Meetup.</p>
-        <p class="technologies">Technologies: <span class="tags">Git, Ruby, Rubygems, Bash, Github</span></p>
-
-        <h3>This Weekend or Next</h3>
-        <p><a href="http://www.thisweekendornext.com" class="project__link" target="_blank">This Weekend or Next</a> is a Sinatra application to clarify what constitutes 'this weekend' versus 'next weekend.' It calculates the date and time based on your selected timezone via ActiveSupport.</p>
-        <p class="technologies">Technologies: <span class="tags">Ruby, Sinatra, CSS, Github</span></p>
-
-        <h3>Get to 24</h3>
-        <p><a href="http://www.getto24.com" class="project__link" target="_blank">Get to 24</a> is a Sinatra application allowing the user to play the 24 Game, a math card game.</p>
-        <p class="technologies">Technologies: <span class="tags">Ruby, Sinatra, Bootstrap, CSS, ERB, Heroku, Github</span></p>
-
-        <h3>Project Euler problems</h3>
-        <p>In my free time, I solve problems on <a href="http://www.projecteuler.net" class="project__link" target="_blank">Project Euler</a>, a site hosting mathematical and algorithmic challenges.</p>
-        <p><img src="https://projecteuler.net/profile/randallreedjr.png"></p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with me through any of these channels:</p>
-        <div class="contact-links-container">
-          <div class="contact-links">
-            <p>
-              <a href="https://www.twitter.com/randallocalypse" target="_blank" class="contact-link">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                @randallocalypse
-              </a>
-            </p>
-            <p>
-              <a href="https://www.instagram.com/randallocalypse/" target="_blank" class="contact-link">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                @randallocalypse
-              </a>
-            </p>
-          </div>
-          <div class="contact-links">
-          <p>
-            <a href="https://www.github.com/randallreedjr" target="_blank" class="contact-link">
-              <i class="fa fa-github" aria-hidden="true"></i>
-              /randallreedjr
-            </a>
-          </p>
-          <p>
-            <a href="http://stackoverflow.com/users/1951290/randallreedjr" target="_blank" class="contact-link">
-              <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-              /randallreedjr
-            </a>
-          </p>
-          <p>
-            <a href="https://medium.com/@randallreedjr" target="_blank" class="contact-link">
-              <i class="fa fa-medium" aria-hidden="true"></i>
-              /randallreedjr
-            </a>
-          </p>
-          <p>
-            <a href="http://www.linkedin.com/in/randallreedjr" target="_blank" class="contact-link">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              /in/randallreedjr
-            </a>
-          </p>
-        </div>
-        </div>
-      </section>
+      {{> projects/freelance}}
+      {{> projects/open-source}}
+      {{> projects/personal}}
+      {{> contact}}
     </main>
     <footer>
-      {{> footer}}
+      {{> layout/footer}}
     </footer>
   </body>
 </html>
