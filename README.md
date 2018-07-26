@@ -14,9 +14,24 @@ Install other dependencies
 npm install
 ```
 
+Install gulp
+```
+npm install --global gulp-cli
+```
+
 ### AWS CLI tool
 
-See http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html for install instructions
+Install AWS CLI
+```
+brew install awscli
+```
+
+If you encounter any issues, see http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html for install instructions
+
+Configure your AWS user
+```
+aws configure
+```
 
 ### Rake tasks
 
