@@ -39,7 +39,7 @@ task :deploy => 'build' do
   status = `git status -s`.chomp
   if branch == 'master' && status.empty?
     puts "Deploying to aws!".green
-    `aws s3 cp ./dist s3://www.randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
+    `aws s3 cp ./dist s3://randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
   elsif branch != 'master'
     puts "Error! Cannot deploy from branch '#{branch}', only 'master'".red
   elsif !status.empty?
