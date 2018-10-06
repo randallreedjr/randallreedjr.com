@@ -39,7 +39,6 @@ gulp.task('images', function () {
 gulp.task('seo_files', function () {
   return gulp.src('src/seo_files/*')
     .pipe(gulp.dest('dist'));
-
 });
 
 gulp.task('default', ['sass', 'handlebars', 'vendor', 'images', 'seo_files']);
