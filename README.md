@@ -49,5 +49,3 @@ Deploy to aws hosting
 ```
 rake deploy
 ```
-
-Deployment is also configured through Codeship. Any push to the `master` branch will trigger a deploy.
