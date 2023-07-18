@@ -37,11 +37,11 @@ desc 'Deploy updates to Amazon S3'
 task :deploy => 'build' do
   branch = `git rev-parse --abbrev-ref HEAD`.chomp
   status = `git status -s`.chomp
-  if branch == 'master' && status.empty?
+  if branch == 'main' && status.empty?
     puts "Deploying to aws!".green
     `aws s3 cp ./dist s3://randallreedjr.com --recursive --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`
-  elsif branch != 'master'
-    puts "Error! Cannot deploy from branch '#{branch}', only 'master'".red
+  elsif branch != 'main'
+    puts "Error! Cannot deploy from branch '#{branch}', only 'main'".red
   elsif !status.empty?
     puts "Error! Cannot deploy with uncommited changes".red
   end
