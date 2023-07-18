@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('sass', function () {
   var input = 'src/stylesheets/style.scss';
@@ -41,4 +41,4 @@ gulp.task('seo_files', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass', 'handlebars', 'vendor', 'images', 'seo_files']);
+gulp.task('default', gulp.series('sass', 'handlebars', 'vendor', 'images', 'seo_files'));
