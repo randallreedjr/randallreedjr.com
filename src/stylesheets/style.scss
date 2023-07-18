@@ -177,7 +177,7 @@ ul {
 .profile-img {
   height: $headshot-width;
   width: $headshot-width;
-  border-radius: $headshot-width / 2;
+  border-radius: calc($headshot-width / 2);
 }
 
 p.technologies {
