@@ -32,7 +32,7 @@ npm install --global gulp-cli
 ### ruby
 ```
 rvm get stable
-rvm install 3.2.2 --enable-shared --with-openssl-dir=/opt/homebrew/opt/openssl@3.1 --with-out-ext=fiddle
+rvm install 3.2.6
 ```
 
 ### bundler
